@@ -1,0 +1,42 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    </head>
+    <body>
+        <h1>
+            Endpoints
+        </h1>
+
+        <h2>/api/question-extraction</h2>
+        <h3>POST endpoint</h3>
+        <p>Uses a BERT Large Uncased model fine tuned on SQUAD 91.0% accuracy</p>
+
+        <p>Requires</p>
+        <ul>
+            <li>question: "The question you want to ask"</li>
+            <li>context: "The passage of text you want to search in"</li>
+        </ul>
+        <p>Returns</p>
+        <ul>
+            <li>'question': The question you asked</li>
+            <li>'context': The context you passed</li>
+            <li>'result': The answer to the question</li>
+        </ul>
+
+        <h2>/api/sentiment-extraction</h2>
+        <h3>POST endpoint</h3>
+        <p>Finds the sentiment in the text</p>
+
+        <p>Requires</p>
+        <ul>
+            <li>text: "The passage you want to analyse"</li>
+        </ul>
+        <p>Returns</p>
+        <ul>
+            <li>'text': The passage you asked about</li>
+            <li>'result': POSITIVE | NEGATIVE</li>
+        </ul>
+    </body>
+</html>
